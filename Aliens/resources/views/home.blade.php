@@ -16,7 +16,13 @@
         <a href="login">
             <input type="button" name="logout" value="Sair">
         </a>
-         {{'Aqui vão os posts'}}
+        {{'Aqui vão os posts'}}
+
+        @foreach ($posts as $post)
+            <p> {{$post->title}} </p>
+            <p> {{$post->content}} </p>
+        @endforeach
+      
 
     </body>
 </html>

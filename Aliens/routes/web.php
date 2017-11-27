@@ -19,13 +19,8 @@ Route::get('register', function () {
     return view('register');
 });
 
-Route::get('home', function () {
-    return view('home');
-});
-
-Route::post('home', function () {
-    return view('home');
-});
+Route::get('home','PostsController@getAllPosts');
+Route::post('home','PostsController@getAllPosts');
 
 Route::get('new_post', function () {
     return view('new_post');
