@@ -10,7 +10,7 @@
     </head>
     <body>
 
-        <form method="post" action="home">
+        <form method="post" action="new_post">
             <p> Titulo </p> 
             <br />
             <input type="text" name="title" />

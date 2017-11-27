@@ -13,7 +13,7 @@
 
 Route::get('/', 'Controller@login');
 Route::get('login', 'Controller@login');
-
+Route::post('login', 'Controller@authenticate');
 
 Route::get('register', function () {
     return view('register');
@@ -22,10 +22,10 @@ Route::get('register', function () {
 Route::get('home','PostsController@getAllPosts');
 Route::post('home','PostsController@getAllPosts');
 
+Route::get('home/{post}','PostsController@getPost');
+
 Route::get('new_post', function () {
     return view('new_post');
 });
 
-Route::post('new_post', function () {
-    return view('new_post');
-});
+Route::post('new_post','PostsController@insert');

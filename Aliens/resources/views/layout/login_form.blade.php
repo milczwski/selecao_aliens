@@ -1,4 +1,4 @@
-<form method="post" action="{{'/home'}}">
+<form method="post" action="{{'/login'}}">
     <p> E-mail </p> 
     <br />
     <input type="text" name="login" />
