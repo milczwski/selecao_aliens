@@ -26,11 +26,11 @@ DB_PASSWORD=sua_senha_do_BD
 - Abra o console no diretório 'Aliens'
 - Acesse o PHPMyAdmin `localhost/phpmyadmin`.
 - Crie um banco de dados com o nome 'aliens'.
-- Neste banco, clique em importar.
+- Neste banco, clique no item importar encontrado na barra superior.
 - Selecione o arquivo dump_bd.sql que está na raiz do respositório deste sistema.
 - Execute o arquivo.
-- Rode o servidor `php artisan serve` na pasta Aliens ou execute pelo Xamp.
-- Você também pode configurar o arquivo em '.../xampp/apache/conf/extra/httpd-vhosts.conf' provavelmente na linha 27. Descomente o código e deixe igual a este abaixo:
+- Rode no terminal o comando `php artisan serve` na pasta Aliens. Ou execute pelo Xamp se você salvou o repositório na pasta `xamp/php/www`.
+- Você também pode configurar o arquivo em '.../xampp/apache/conf/extra/httpd-vhosts.conf' para fazer com que o `localhost` seja o a raiz do projeto. Provavelmente a partir da linha 27, descomente o código e deixe igual a este abaixo:
 
 ```
 <VirtualHost *:80>
@@ -43,5 +43,5 @@ DB_PASSWORD=sua_senha_do_BD
 </VirtualHost>
 ```
 
-- Pronto. Agora é só acessar no navegador o `http://localhost` ou `http://localhost/aliens/public` (dependendo da configuração).
+- Pronto. Agora é só acessar no navegador o `http://localhost:8000`, `http://localhost/aliens/public` ou `http://localhost` (dependendo da configuração).
 
