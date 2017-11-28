@@ -8,9 +8,3 @@
     @include('layout.top_panel')
     @include('layout.posts',$posts)
 @endsection
-        
-
-
-       
-      
-

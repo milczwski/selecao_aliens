@@ -7,28 +7,21 @@ use App\Post;
 
 class PostsController extends Controller
 {
+    /*Esta função busca e retorna todas as postagens
+    * salvas no banco de dados.
+    */
     public function getAllPosts() {
     	$posts = Post::all();
     	return view('home',compact('posts'));
     }
 
-    public function getPost($id, Request $request) {
-    	$posts = Post::where([
-    			['id','=',$id],
-    			['title','=','Seja Bem Vindo!']
-    		])->get();
-    	return $posts;
-    }
-
+    /*Esta função insere uma nova postagem no banco de dados.*/
     public function insert(Request $request) {
     	$post = Post::create([
             'title' => $request->title,
             'content' => $request->content,
-            'user_id' => 1
+            'user_id' => $request->session()->get('user')[0]->id
         ]);
-    	//TODO COLOCAR USER ID VINDO NO REQUEST
-    	$post->user_id = 1;
-    	echo $post;
     	$post->save();
     	return redirect('home');
     }

@@ -1,2 +1,6 @@
-# selecao_aliens
-CMS simples com finalidade de estudo e avaliação
+# Sistema de Criação de Postagens
+CMS simples com finalidade de estudo e avaliação.
+
+#Instalação
+
+

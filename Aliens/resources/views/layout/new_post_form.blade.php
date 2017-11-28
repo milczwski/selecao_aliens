@@ -1,5 +1,5 @@
 <div class="jumbotron vertical-center vertical-center col-sm-4 col-sm-offset-4" style="margin-top:10%;">
-    <form method="post" action="{{'/new_post'}}" id="post_form">
+    <form method="post" action="new_post" id="post_form">
         <div class="form-group">
             <label for="title">Título</label>
             <input type="title" class="form-control" id="title" name="title" placeholder="Título">

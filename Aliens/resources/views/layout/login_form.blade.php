@@ -1,5 +1,5 @@
 <div class="jumbotron vertical-center vertical-center col-sm-4 col-sm-offset-4" style="margin-top:10%;">
-	<form method="post" action="{{'/login'}}">
+	<form method="post" action="login">
 		<div class="form-group">
 		    <label for="email">Email address</label>
 		    <input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com">

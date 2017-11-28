@@ -8,6 +8,9 @@ use App\User;
 class UsersController extends Controller
 {
 
+    /*Esta função faz a autenticação do usuário.
+    *TODO: migrar para Middleware.
+    */
     public function authenticateLogin(Request $request) {
 		$email = $request->input('email');
     	$password = $request->input('password');
@@ -23,13 +26,13 @@ class UsersController extends Controller
     	}
     }
 
+    /*Está função insere um novo usuário no banco de dados*/
     public function insert(Request $request) {
     	$user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password
         ]);
-    	//TODO COLOCAR USER ID VINDO NO REQUEST
     	$user->save();
     	return redirect('login');
     }

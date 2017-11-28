@@ -9,11 +9,17 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PostsController;
 
+
+/*  A Classe Controller realiza as chamadas das páginas web
+*   deste sistema. Está classe tem finalidade de ser uma Façade.
+*/
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    //TODO Change this function name
+    /*Esta função retorna true se existe um usuário
+    * logado e false para caso não exista.
+    */
 	public function isAuthenticated(Request $request) {
 		$user = $request->session()->get('user');
 		if ($user != null) {
@@ -23,6 +29,10 @@ class Controller extends BaseController
 		}
 	}
 
+    /*Esta função vai para a tela de login
+    * se chamada por métdo GET ou tenta realizar
+    * o login se chamada pele método POST.
+    */
     public function login(Request $request)
     {
     	$usersController = new UsersController;
@@ -36,11 +46,15 @@ class Controller extends BaseController
     	}
     }
 
+    /*Esta função realiza o logout do usuário*/
     public function logout(Request $request) {
     	$request->session()->forget('user');
     	return view('login');
     }
 
+    /*Esta função redireciona o usuário para a página
+    * de criação de post.
+    */
     public function new_post(Request $request) {
     	if ($this->isAuthenticated($request)) {
     		return view('new_post');
@@ -49,6 +63,9 @@ class Controller extends BaseController
     	}
     }
 
+    /*Esta função redireciona o usuário para a home
+    * quando logado.
+    */
     public function home(Request $request) {
     	if ($this->isAuthenticated($request)) {
     		$postsController = new PostsController;
@@ -58,6 +75,9 @@ class Controller extends BaseController
     	}
     }
 
+    /*Esta função redireciona o usuário convidado para a tela
+    * de cadastro de usuário.
+    */
     function register (Request $request) {
     	return view('register');
     }

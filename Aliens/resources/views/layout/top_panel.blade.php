@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="col-sm-2 col-sm-offset-7">
+	<div class="col-sm-3 col-sm-offset-6">
 		@if(Session::has('user'))
 		  <p> Seja bem vindo, {{ Session::get('user')[0]->name }}. </p>
 		@else
