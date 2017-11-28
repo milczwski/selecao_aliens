@@ -13,19 +13,14 @@
 
 Route::get('/', 'Controller@login');
 Route::get('login', 'Controller@login');
-Route::post('login', 'Controller@authenticate');
+Route::post('login', 'UsersController@authenticateLogin');
 
-Route::get('register', function () {
-    return view('register');
-});
+Route::get('logout', 'Controller@logout');
 
-Route::get('home','PostsController@getAllPosts');
-Route::post('home','PostsController@getAllPosts');
+Route::get('register', 'Controller@register');
+Route::post('register', 'UsersController@insert');
 
-Route::get('home/{post}','PostsController@getPost');
+Route::get('home','Controller@home');
 
-Route::get('new_post', function () {
-    return view('new_post');
-});
-
+Route::get('new_post', 'Controller@new_post');
 Route::post('new_post','PostsController@insert');

@@ -10,18 +10,21 @@
     </head>
     <body>
 
-        <form method="post" target="login">
+        <form method="post" action="register">
             <p> Nome </p> 
             <br />
-            <input type="text" name="login" />
+            <input type="text" name="name" />
+            <p> Email </p> 
+            <br />
+            <input type="text" name="email" />
             <p> Senha </p> 
             <br />
-            <input type="password" name="senha" />
+            <input type="password" name="password" />
             <p> Confirme sua Senha </p> 
             <br />
-            <input type="password" name="senha" />
+            <input type="password" name="password" />
             <br />
-            <input type="submit" name="Cadastrar" />
+            <input type="submit" name="Cadastrar" value="Cadastrar"/>
         </form>
         <a href="/">
             <input type="button" name="Cancelar" value="Cancelar">

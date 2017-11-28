@@ -13,14 +13,10 @@ class PostsController extends Controller
     }
 
     public function getPost($id, Request $request) {
-    	if ($request->isMethod('post')) {
-		    echo "é post";
-		} else {
-			echo "não é post";
-		}
-
-
-    	$posts = Post::where('id',$id)->get();
+    	$posts = Post::where([
+    			['id','=',$id],
+    			['title','=','Seja Bem Vindo!']
+    		])->get();
     	return $posts;
     }
 
@@ -34,5 +30,7 @@ class PostsController extends Controller
     	$post->user_id = 1;
     	echo $post;
     	$post->save();
+    	return redirect('home');
     }
+
 }
