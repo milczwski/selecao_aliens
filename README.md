@@ -24,8 +24,12 @@ DB_PASSWORD=sua_senha_do_BD
 ```
 
 - Abra o console no diretório 'Aliens'
-- Digite o comando `php artisan migrate`, isso fará com que seja criado as tabelas no banco de dados.
-- Rode o servidor `php artisan serve` na pasta Aliens ou execute o Xamp.
+- Acesse o PHPMyAdmin `localhost/phpmyadmin`.
+- Crie um banco de dados com o nome 'aliens'.
+- Neste banco, clique em importar.
+- Selecione o arquivo dump_bd.sql que está na raiz do respositório deste sistema.
+- Execute o arquivo.
+- Rode o servidor `php artisan serve` na pasta Aliens ou execute pelo Xamp.
 - Você também pode configurar o arquivo em '.../xampp/apache/conf/extra/httpd-vhosts.conf' provavelmente na linha 27. Descomente o código e deixe igual a este abaixo:
 
 ```
