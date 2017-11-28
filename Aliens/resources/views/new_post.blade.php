@@ -1,28 +1,10 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.app')
 
-        <title>Aliens - Login</title>
+@section('title')
+    {{'Novo Post - Aliens'}}
+@endsection
 
-    </head>
-    <body>
-
-        <form method="post" action="new_post">
-            <p> Titulo </p> 
-            <br />
-            <input type="text" name="title" />
-            <p> Descrição </p> 
-            <br />
-            <input type="text" name="content" />
-            <br />
-            <input type="submit" name="Salvar" value="Criar" />
-        </form>
-        <a href="home">
-            <input type="button" name="Cancelar" value="home">
-        </a>
-
-    </body>
-</html>
+@section('content')
+    @include('layout.top_panel')
+    @include('layout.new_post_form')
+@endsection
