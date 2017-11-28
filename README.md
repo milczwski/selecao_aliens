@@ -23,11 +23,10 @@ DB_USERNAME=nome_do_seu_usuario
 DB_PASSWORD=sua_senha_do_BD
 ```
 
-- Abra o console no diretório 'Aliens'
 - Acesse o PHPMyAdmin `localhost/phpmyadmin`.
 - Crie um banco de dados com o nome 'aliens'.
 - Neste banco, clique no item importar encontrado na barra superior.
-- Selecione o arquivo dump_bd.sql que está na raiz do respositório deste sistema.
+- Clique em escolher arquivo. Selecione o arquivo dump_bd.sql que está na raiz do respositório deste sistema.
 - Execute o arquivo.
 - Rode no terminal o comando `php artisan serve` na pasta Aliens. Ou execute pelo Xamp se você salvou o repositório na pasta `xamp/php/www`.
 - Você também pode configurar o arquivo em '.../xampp/apache/conf/extra/httpd-vhosts.conf' para fazer com que o `localhost` seja o a raiz do projeto. Provavelmente a partir da linha 27, descomente o código e deixe igual a este abaixo:
